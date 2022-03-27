@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Example animation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body class="antialiased text-body font-body" style="background-color: black;">
+  <div id="animation" style="width: 200px; height:200px; background-color: white;">
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+  <script>
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'moon.json'
+    });
+  </script>
+</body>
+
+</html>

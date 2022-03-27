@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Unicorn Nodes
+    </title>
+    <script src="https://kit.fontawesome.com/795b03a1f9.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Unicorns Landing Page" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+<!--    <script type="text/javascript" src="js/tailwind.config.js"></script>-->
+    <script src="js/lottie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  </head>
+  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+  <div class="spinner-wrapper hidden">
+    <div id="spinner"></div>
+  </div>
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white inline">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-around mt-0 inline"  id="navbar">
+
+        <div class="pl-4 flex items-center">
+          <img src="Images/unicornNodesTitle.png" id="titleBanner">
+        </div>
+
+        <div id="dayToggle" class="shiftToggle">
+        </div>
+        <div id="moonToggle" class="shiftToggle moonToggle dark">
+        </div>
+
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+          <div class="ball"></div>
+        </label>
+
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex bg-transparent items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white-50 lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3 border-2 rounded-lg navLink">
+              <a class="inline-block py-2 px-4 text-black no-underline" href="#">Tv Series</a>
+            </li>
+            <li class="mr-3 border-2 rounded-lg navLink">
+              <a class="inline-block py-2 px-4 text-black no-underline" href="#">Auction</a>
+            </li>
+            <li class="mr-3 border-2 rounded-lg navLink">
+              <a class="inline-block py-2 px-4 text-black no-underline" href="#">Vault</a>
+            </li>
+            <li class="mr-3 border-2 rounded-lg navLink">
+              <a class="inline-block py-2 px-4 text-black no-underline" href="#">$Rainbow Chart</a>
+            </li>
+            <li class="mr-3 border-2 rounded-lg navLink">
+              <a class="inline-block py-2 px-4 text-black no-underline" href="#">Buy $Rainbow</a>
+            </li>
+          </ul>
+          <button
+                  id="navAction"
+                  class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            dApp
+          </button>
+        </div>
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+
+    <!--Hero-->
+    <div class="flex justify-center mx-auto my-auto flex-wrap">
+
+        <img src="Images/UnicornLogo.png" id="uniLogo" class="hidden lg:block">
+        <img src="Images/UnicornLogo.png" id="uniLogoSm" class="sm:block lg:hidden">
+
+      <div id="dayBack" class="somethingTest"></div>
+      <div id="nightBack" class="nothing"></div>
+<!--        <div class="cloud" id="lottiTest"></div>-->
+<!--        &lt;!&ndash;Left Col&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="rotate-45 flex items-start right-0 ">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div id="rainbowImg" ></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left border-2 rounded-lg bg-purple-300 p-5 z-index-1 hidden">-->
+<!--          <h1 class="my-4 text-5xl font-bold leading-tight">-->
+<!--            Lorem ipsum dolor sit amet.-->
+<!--          </h1>-->
+<!--          <p class="leading-normal text-2xl mb-8">-->
+<!--            Sub-hero message, not too long and not too short. Make it just right!-->
+<!--          </p>-->
+<!--          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:bg-sky-700 duration-300 ease-in-out">-->
+<!--            Buy $Rainbow-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;Right Col MAIN image&ndash;&gt;-->
+
+
+    </div>
+
+
+    <section class="py-8 bg-white flex items-center">
+
+      <div class="mx-auto flex flex-wrap pt-4 m-0">
+        <img src="Images/roadmap_black.svg" class="roadMapTitle mx-auto pb-1">
+
+        <img src="Images/roadmap.png" class="roadmap mx-auto">
+
+      </div>
+    </section>
+
+<hr>
+
+    <section class="bg-transparent-500 py-8">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 bigTitle">
+        NODES
+      </h1>
+      <div class="flex inline justify-center mx-auto container flex-wrap">
+
+        <div class="nodeBlock">
+            <div id="nodes"></div>
+        </div>
+        <div class="flex items-center">
+          <div class="border-4 rounded-lg px-1 py-1">
+            <div class="text-gray-800 bigTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+            <div class="text-gray-800 bigTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+            <div class="text-gray-800 bigTitle"> <h1>APY: $RAINBOW</h1></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<hr>
+
+    <section class="py-8">
+      <div class="container mx-auto flex flex-wrap pt-4">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 bigTitle">
+          Meet the team
+        </h1>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                xGETTING STARTED
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Lorem ipsum dolor sit amet.
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+              </p>
+            </a>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex items-center justify-start">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Action
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                xGETTING STARTED
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Lorem ipsum dolor sit amet.
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+              </p>
+            </a>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex items-center justify-center">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Action
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                xGETTING STARTED
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Lorem ipsum dolor sit amet.
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+              </p>
+            </a>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex items-center justify-end">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Action
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto text-center flex">
+        <div class="mx-auto">
+          <button class="mx-auto lg:mx-0 hover:underline text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            Twitter
+          </button>
+        </div>
+        </div >
+        <div class="mx-auto">
+          <button class="mx-auto lg:mx-0 hover:underline text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          Discord
+          </button>
+        </div>
+        <div class="mx-auto">
+          <button class="mx-auto lg:mx-0 hover:underline text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            Whitepaper
+          </button>
+        </div>
+        <div class="mx-auto">
+          <button class="mx-auto lg:mx-0 hover:underline text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            Medium
+          </button>
+        </div>
+      <div class="grassContainer">
+        <div id="grassFooter" class="flex items-center"></div>
+      </div>
+    </section>
+    <!--Footer-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+ var animation = bodymovin.loadAnimation({
+      container: document.getElementById('rainbowImg'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Images/Rainbow_soft_colors.json'
+    });
+
+ var animation = bodymovin.loadAnimation({
+      container: document.getElementById('cloudOne'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/cloud.json'
+    });
+
+ var animation = bodymovin.loadAnimation({
+      container: document.getElementById('cloudTwo'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/cloud.json'
+    });
+ var animation = bodymovin.loadAnimation({
+      container: document.getElementById('cloudThree'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/cloud.json'
+    });
+ var animation = bodymovin.loadAnimation({
+      container: document.getElementById('cloudFour'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/cloud.json'
+    });
+ var animation = bodymovin.loadAnimation({
+      container: document.getElementById('cloudFive'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/cloud.json'
+    });
+ var animation = bodymovin.loadAnimation({
+      container: document.getElementById('cloudSix'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/cloud.json'
+    });
+
+ var animation = bodymovin.loadAnimation({
+      container: document.getElementById('dayBack'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/bg_day_sun_birds.json'
+    });
+
+   var animation = bodymovin.loadAnimation({
+      container: document.getElementById('nightBack'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/dark_bg_main_with_moon.json'
+    });
+
+
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('spinner'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/raibow_circle_loading.json'
+    });
+
+   var animation = bodymovin.loadAnimation({
+      container: document.getElementById('dayToggle'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/sun.json'
+    });
+
+   var animation = bodymovin.loadAnimation({
+      container: document.getElementById('moonToggle'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/moon.json'
+    });
+
+   var animation = bodymovin.loadAnimation({
+      container: document.getElementById('grassFooter'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'lottie-example/grass_full_with_flowers.json'
+    });
+
+   var animation = bodymovin.loadAnimation({
+      container: document.getElementById('nodes'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Lottie/nodes.json'
+    });
+
+  const checkbox = document.getElementById("checkbox");
+
+  console.log(document.querySelector("#nightBack"))
+
+  checkbox.addEventListener("change", () =>{
+    document.querySelector("#header").classList.toggle("darkNav");
+
+    document.getElementsByTagName('body')[0].classList.toggle("dark");
+
+    document.querySelector("#nightBack").classList.toggle("nothing");
+    document.querySelector("#dayBack").classList.toggle("nothing");
+
+    document.querySelector(".shiftToggle").classList.toggle("dark");
+    document.querySelector(".moonToggle").classList.toggle("dark");
+
+  })
+
+  let spinnerWrapper = document.querySelector(".spinner-wrapper");
+
+  window.addEventListener('load', function () {
+    spinnerWrapper.style.display = 'none';
+  })
+
+
+      var scrollpos = window.scrollY;
+      var header = document.getElementById("header");
+      var navcontent = document.getElementById("nav-content");
+      var navaction = document.getElementById("navAction");
+      var brandname = document.getElementById("brandname");
+      var toToggle = document.querySelectorAll(".toggleColour");
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          header.classList.add("bg-white");
+          navaction.classList.remove("bg-white");
+          navaction.classList.add("gradient");
+          navaction.classList.remove("text-gray-800");
+          navaction.classList.add("text-white");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-800");
+            toToggle[i].classList.remove("text-white");
+          }
+          header.classList.add("shadow");
+          navcontent.classList.remove("bg-gray-100");
+          navcontent.classList.add("bg-white");
+        } else {
+          header.classList.remove("bg-white");
+          navaction.classList.remove("gradient");
+          navaction.classList.add("bg-white");
+          navaction.classList.remove("text-white");
+          navaction.classList.add("text-gray-800");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-800");
+          }
+
+          header.classList.remove("shadow");
+          navcontent.classList.remove("bg-white");
+          navcontent.classList.add("bg-gray-100");
+        }
+      });
+    </script>
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
